@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "watch": true
+  },
+  "typeAcquisition": {
+    "enable": true
+  }
+}

@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS101 | CodeWorks JS Testing Grounds</title>
+  <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <section class="back">
+    <a href="/" style="display: flex; align-items: center">
+      <img src="assets/codeworks-academy-nav.png" width="140" style="margin-right: .25em;">
+    </a>
+    <h5 style="margin-left: .25em;"><span>Tests</span> <span id="breadcrumb"></span></h5>
+  </section>
+
+  <section>
+    <div id="mocha"></div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/6.1.4/mocha.min.js"></script>
+
+  <script src="app/conditionals.js"></script>
+  <script src="app/switches.js"></script>
+
+  <script src="test/runner.js" type="module"></script>
+
+</body>
+
+</html>

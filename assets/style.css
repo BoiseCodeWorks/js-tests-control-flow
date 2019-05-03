@@ -1,0 +1,92 @@
+:root{
+  --light: #f1f1f1;
+  --grey: #a7a6a6;
+  --primary: #3aa5dc;
+  --dark: #231f20;
+  --danger: #e41246;
+  --success: #1db863;
+}
+body{
+  background: var(--light);
+}
+
+.back{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: .5em;
+  background: var(--dark);
+  color: var(--light);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.back a{
+  color: var(--light);
+}
+a{
+  text-decoration: none;
+}
+
+#mocha{
+  margin: 0;
+  padding: 1em;
+  margin-top: 70px;
+}
+
+#mocha #mocha-stats{
+  color: var(--light);
+  top: 16px;
+  right: 25px;
+  background-color: var(--danger);
+  display: flex;
+  align-items: center;
+  z-index: 99;
+}
+
+#mocha #mocha-stats li{
+  padding: 1em;
+  margin: 0;
+}
+
+#mocha #mocha-stats li.passes{
+  background: var(--success);
+}
+
+#mocha #mocha-stats li.failures{
+  background: var(--danger);
+}
+
+#mocha-stats .duration,
+#mocha-stats .progress{
+  display: none;
+}
+
+#mocha-stats em{
+  color: var(--light);
+}
+
+#mocha .test a.replay{
+  display: none;
+}
+
+ul#mocha-report > li.suite > h1{
+  text-transform: uppercase;
+  padding: 1em;
+  background-color: var(--primary);
+  color: var(--light);
+  margin: 0;
+}
+
+ul#mocha-report > li.suite{
+  margin-bottom: 1em;
+}
+
+#mocha ul li.suite ul li.suite{
+  margin-left: 0;
+  padding: 1em;
+  background: #fff;
+  box-shadow:  0 4px 5px -5px var(--dark);
+}
