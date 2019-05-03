@@ -24,4 +24,22 @@ describe("switches.js", () => {
          chai.assert.strictEqual(golfScore(800, 3).toLowerCase(), "ouch", "utilize your default component of the switch statement!")
       })
    })
+   describe("cardCounter Function", () => {
+      it("returns a string", () => {
+         chai.assert.isString(cardCounter('8'), "Return type must be a string.")
+      })
+      it("returns the correct count and action after several executions", () => {
+         chai.assert.isTrue((() => {
+            try {
+               count = 0
+            } catch(e) { console.error(e) }
+            cardCounter('K') // -1
+            cardCounter('7') // -1
+            cardCounter('K') // -2
+            let str = cardCounter('2') // -1
+            if (str.toLowerCase() != '-1 hold') return false
+            return true
+         })(), "Refer to the table to make sure you're assigning the correct value to the count depending on the card!")
+      })
+   })
 })
