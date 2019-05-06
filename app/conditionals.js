@@ -2,7 +2,7 @@
 
 function largerNum(num1, num2) {
     // you code below
-
+    return (num1 > num2) ? num1 : num2
     // you code above
 }
 
@@ -34,11 +34,10 @@ function testGrader(score, possible) {
 function timeOfDayGreeting(hour) {
     // you code below
 
-    // you code above
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
-function fever(temp) {
+function isFever(temp) {
 
 }
 
