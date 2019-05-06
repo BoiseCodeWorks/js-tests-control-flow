@@ -22,19 +22,19 @@ describe("conditionals.js", () => {
          chai.assert.isString(timeOfDayGreeting(5), "Be sure to return a greeting")
       })
       it("Function should return Good Morning during the morning hours", () => {
-         chai.assert.isTrue(timeOfDayGreeting(5) == "Good Morning" && timeOfDayGreeting(11) == "Good Morning" && timeOfDayGreeting(7) == "Good Morning", "Be sure to return 'Good Morning' between (and including) the hours 5 and 11")
+         chai.assert.isTrue(timeOfDayGreeting(5).toLowerCase() == "good morning" && timeOfDayGreeting(11).toLowerCase() == "good morning" && timeOfDayGreeting(7).toLowerCase() == "good morning", "Be sure to return 'Good Morning' between (and including) the hours 5 and 11")
       })
       it("Function should return Good Afternoon during afternoon hours", () => {
-         chai.assert.isTrue(timeOfDayGreeting(13) == "Good Afternoon" && timeOfDayGreeting(12) == "Good Afternoon" && timeOfDayGreeting(17) == "Good Afternoon", "Be sure to return 'Good Afternoon' between (and including) the hours 12 and 17")
+         chai.assert.isTrue(timeOfDayGreeting(13).toLowerCase() == "good afternoon" && timeOfDayGreeting(12).toLowerCase() == "good afternoon" && timeOfDayGreeting(17).toLowerCase() == "good afternoon", "Be sure to return 'Good Afternoon' between (and including) the hours 12 and 17")
       })
       it("Function should return Good Evening for evening hours", () => {
-         chai.assert.isTrue(timeOfDayGreeting(18) == "Good Evening" && timeOfDayGreeting(20) == "Good Evening" && timeOfDayGreeting(21) == "Good Evening", "Be sure to return 'Good Evening' between the hours of 22 - 24 and 1 - 4")
+         chai.assert.isTrue(timeOfDayGreeting(18).toLowerCase() == "good evening" && timeOfDayGreeting(20).toLowerCase() == "good evening" && timeOfDayGreeting(21).toLowerCase() == "good evening", "Be sure to return 'Good Evening' between the hours of 22 - 24 and 1 - 4")
       })
       it("Function should return Good Night for nightime hours between 22 and 24", () => {
-         chai.assert.isTrue(timeOfDayGreeting(22) == "Good Night" && timeOfDayGreeting(23) == "Good Night" && timeOfDayGreeting(24) == "Good Night", "Be sure to return 'Good Night' between (and including) the hours 22 and 24")
+         chai.assert.isTrue(timeOfDayGreeting(22).toLowerCase == "good night" && timeOfDayGreeting(23).toLowerCase == "good night" && timeOfDayGreeting(24).toLowerCase == "good night", "Be sure to return 'Good Night' between (and including) the hours 22 and 24")
       })
       it("Function should return Good Night for nighttime hours between 1 and 4", () => {
-         chai.assert.isTrue(timeOfDayGreeting(1) == "Good Night" && timeOfDayGreeting(3) == "Good Night" && timeOfDayGreeting(4) == "Good Night", "Be sure to return 'Good Night' between (and including) the hours 1 and 4")
+         chai.assert.isTrue(timeOfDayGreeting(1).toLowerCase == "good night" && timeOfDayGreeting(3).toLowerCase == "good night" && timeOfDayGreeting(4).toLowerCase == "good night", "Be sure to return 'Good Night' between (and including) the hours 1 and 4")
       })
 
    })
@@ -43,17 +43,17 @@ describe("conditionals.js", () => {
          chai.assert.isString(fever(98), "Be sure to return a string")
       })
       it("Should return 'no fever' if temp is under or equal to 98.6", () => {
-         chai.assert.isTrue(fever(98) == "no fever", "Be sure to return 'no fever' is temp is below 98.6")
-         chai.assert.isTrue(fever(75) == "no fever")
-         chai.assert.isTrue(fever(98.6) == "no fever", "Be sure to return 'no fever' if temp is equal to 98.6")
+         chai.assert.isTrue(fever(98).toLowerCase() == "no fever", "Be sure to return 'no fever' is temp is below 98.6")
+         chai.assert.isTrue(fever(75).toLowerCase() == "no fever")
+         chai.assert.isTrue(fever(98.6).toLowerCase() == "no fever", "Be sure to return 'no fever' if temp is equal to 98.6")
       })
       it("Should return 'fever' if temp is above 98.6", () => {
-         chai.assert.isTrue(fever(98.7) == "fever", "Be sure to return 'fever' if the temp is above 98.6")
-         chai.assert.isTrue(fever(101) == "fever", "Be sure to return 'fever' if temp is above 98.6")
+         chai.assert.isTrue(fever(98.7).toLowerCase() == "fever", "Be sure to return 'fever' if the temp is above 98.6")
+         chai.assert.isTrue(fever(101).toLowerCase() == "fever", "Be sure to return 'fever' if temp is above 98.6")
       })
       it("Should return 'fever go to hospital'", () => {
-         chai.assert.isTrue(fever(103) == "fever go to hospital", "Be sure to return 'fever go to hospital' if temp is at or above 103")
-         chai.assert.isTrue(fever(110) == 'fever go to hospital', "Be sure to return 'fever go to hospital' if temp is at or above 103")
+         chai.assert.isTrue(fever(103).toLowerCase() == "fever go to hospital", "Be sure to return 'fever go to hospital' if temp is at or above 103")
+         chai.assert.isTrue(fever(110).toLowerCase() == 'fever go to hospital', "Be sure to return 'fever go to hospital' if temp is at or above 103")
       })
    })
    describe("isStopped Function", () => {
@@ -108,14 +108,6 @@ describe("conditionals.js", () => {
          chai.assert.strictEqual(flightCost('sea', false), 800)
       })
    })
-   describe("getDayOfWeek Function", () => {
-      it("The 3rd day of the week is Tuesday", () => {
-         chai.assert.isTrue(getDayOfWeek(3) == "Tuesday")
-      })
-      it("If the Monday offset is true, the third day of the week should be Wednesday", () => {
-         chai.assert.isTrue(getDayOfWeek(3, true), "Wednesday")
-      })
 
-   })
 })
 

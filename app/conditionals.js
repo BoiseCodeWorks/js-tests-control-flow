@@ -103,11 +103,3 @@ function flightCost(destination, firstClass) {
 
 }
 
-// 8. Given a number 1-7 return the corresponding day of the week (beginning wth 1 = Sunday).
-// allow a secondary argument (bool) to change the first day of the week to monday
-
-function getDayOfWeek(n, offsetForMon) {
-    // you code below
-
-    // you code above
-}
