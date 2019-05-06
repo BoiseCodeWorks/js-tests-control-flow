@@ -1,7 +1,9 @@
 //1. Given two numbers, write a function that will return  the larger number
 
 function largerNum(num1, num2) {
+    // you code below
 
+    // you code above
 }
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
@@ -30,7 +32,9 @@ function testGrader(score, possible) {
 //Make sure your ranges are inclusive
 
 function timeOfDayGreeting(hour) {
+    // you code below
 
+    // you code above
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
@@ -47,7 +51,9 @@ let myCar = {
 }
 
 function isStopped(car) {
+    // you code below
 
+    // you code above
 }
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
@@ -58,7 +64,9 @@ let dish = {
 }
 
 function washDish(dish) {
+    // you code below
 
+    // you code above
 }
 
 //7. Flights from Boise. Write a function that will use the following data to return the cost of flights from boise to a neighboring city, by default return the standard cost unless firstClass is set to true
@@ -89,17 +97,17 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-    let flight = flights.find(i => i.to == destination)
-    if (firstClass) {
-        return flight.prices["firstClass"]
-    } else {
-        return flight.prices["standard"]
-    }
+    // you code below
+
+    // you code above
+
 }
 
-// 7. Given a number 1-7 return the corresponding day of the week.
+// 8. Given a number 1-7 return the corresponding day of the week (beginning wth 1 = Sunday).
 // allow a secondary argument (bool) to change the first day of the week to monday
 
 function getDayOfWeek(n, offsetForMon) {
+    // you code below
 
+    // you code above
 }

@@ -94,19 +94,28 @@ describe("conditionals.js", () => {
       })
    })
    describe("flightCost Function", () => {
-      let flightArray
-      try {
-         flightArray = flights
-      } catch (e) { console.error(e) }
-      it("Should return the standard price of the flight if the firstClass parameter is set to false", () => {
+
+      it("Flying coach is a lot cheaper than flying firstClass", () => {
          chai.assert.strictEqual(flightCost("LAX", false), 500, "Be sure to return the standard cost if flightClass is set to false")
          chai.assert.strictEqual(flightCost("CAN", false), 750)
       })
 
-      it("Should return the firstclass price of a flight if firstClass is set to true", () => {
+      it("Flying to Canada first class can be expensive", () => {
          chai.assert.strictEqual(flightCost("SEA", true), 1200, "Be sure to check if firstClass is set to true")
          chai.assert.strictEqual(flightCost("CAN", true), 6200)
       })
+      it("Don't be case sensitive!", () => {
+         chai.assert.strictEqual(flightCost('sea', false), 800)
+      })
+   })
+   describe("getDayOfWeek Function", () => {
+      it("The 3rd day of the week is Tuesday", () => {
+         chai.assert.isTrue(getDayOfWeek(3) == "Tuesday")
+      })
+      it("If the Monday offset is true, the third day of the week should be Wednesday", () => {
+         chai.assert.isTrue(getDayOfWeek(3, true), "Wednesday")
+      })
+
    })
 })
 
