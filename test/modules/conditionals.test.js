@@ -34,11 +34,10 @@ describe("conditionals.js", () => {
          chai.assert.isTrue(timeOfDayGreeting(18).toLowerCase() == "good evening" && timeOfDayGreeting(20).toLowerCase() == "good evening" && timeOfDayGreeting(21).toLowerCase() == "good evening", "Be sure to return 'Good Evening' between the hours of 22 - 24 and 1 - 4")
       })
       it("Function should return Good Night for nightime hours between 22 and 24", () => {
-         debugger
-         chai.assert.isTrue(timeOfDayGreeting(22).toLowerCase == "good night" && timeOfDayGreeting(23).toLowerCase == "good night" && timeOfDayGreeting(24).toLowerCase == "good night", "Be sure to return 'Good Night' between (and including) the hours 22 and 24")
+         chai.assert.isTrue(timeOfDayGreeting(22).toLowerCase() == "good night" && timeOfDayGreeting(23).toLowerCase() == "good night" && timeOfDayGreeting(24).toLowerCase() == "good night", "Be sure to return 'Good Night' between (and including) the hours 22 and 24")
       })
       it("Function should return Good Night for nighttime hours between 1 and 4", () => {
-         chai.assert.isTrue(timeOfDayGreeting(1).toLowerCase == "good night" && timeOfDayGreeting(3).toLowerCase == "good night" && timeOfDayGreeting(4).toLowerCase == "good night", "Be sure to return 'Good Night' between (and including) the hours 1 and 4")
+         chai.assert.isTrue(timeOfDayGreeting(1).toLowerCase() == "good night" && timeOfDayGreeting(3).toLowerCase() == "good night" && timeOfDayGreeting(4).toLowerCase() == "good night", "Be sure to return 'Good Night' between (and including) the hours 1 and 4")
       })
 
    })
