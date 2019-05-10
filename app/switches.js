@@ -7,9 +7,7 @@
     // output: 7
 
 function daysPosition(day, offset) {
-    // your code below
 
-    // your code above
 }
 
 
