@@ -1,13 +1,13 @@
 describe("switches.js", () => {
    describe("daysPosition Function", () => {
       it("returns a number (or string if bad input)", () => {
-         chai.assert.isTrue(typeof daysPosition("sunday") == "number" || typeof daysPosition("sunday") == "string", "Return type must be number (or string if bad input).")
+         chai.assert.isTrue(typeof daysPosition("Sunday") == "number" || typeof daysPosition("Sunday") == "string", "Return type must be number (or string if bad input).")
       })
       it("returns the accurate number for offset false", () => {
-         chai.assert.strictEqual(daysPosition("monday"), 2, "With offset false the week starts on Sunday.")
+         chai.assert.strictEqual(daysPosition("Monday"), 2, "With offset false the week starts on Sunday.")
       })
       it("returns the accurate number for offset true", () => {
-         chai.assert.strictEqual(daysPosition("monday", true), 1, "With offset true the week starts on Monday.")
+         chai.assert.strictEqual(daysPosition("Monday", true), 1, "With offset true the week starts on Monday.")
       })
       it("handles bad inputs gracefully", () => {
          chai.assert.strictEqual(daysPosition('foobar'), "That's not a day of the week", "Returns 'That's not a day of the week' if bad input given.")
